@@ -3,13 +3,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example</groupId>
-  <artifactId>demo</artifactId>
+  <groupId>br.com.pcsist</groupId>
+  <artifactId>cap-wta</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>demo</name>
-  <description>Demo project for Spring Boot</description>
+  <name>Capacitação WTA</name>
+  <description>Projeto demonstração capacitação WTA</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -37,14 +37,6 @@
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.zaxxer</groupId>
-      <artifactId>HikariCP</artifactId>
-    </dependency>
-    <!-- <dependency> -->
-    <!-- <groupId>org.springframework</groupId> -->
-    <!-- <artifactId>spring-tx</artifactId> -->
-    <!-- </dependency> -->
 
     <dependency>
       <groupId>org.mockito</groupId>
@@ -58,10 +50,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-commons</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>

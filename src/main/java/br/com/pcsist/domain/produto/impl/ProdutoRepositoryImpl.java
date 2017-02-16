@@ -1,4 +1,4 @@
-package com.example.domain.produto.impl;
+package br.com.pcsist.domain.produto.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -9,8 +9,8 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.example.domain.produto.Produto;
-import com.example.domain.produto.ProdutoRepository;
+import br.com.pcsist.domain.produto.Produto;
+import br.com.pcsist.domain.produto.ProdutoRepository;
 
 public class ProdutoRepositoryImpl implements ProdutoRepository {
 

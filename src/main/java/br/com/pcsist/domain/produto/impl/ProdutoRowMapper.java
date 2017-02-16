@@ -1,11 +1,11 @@
-package com.example.domain.produto.impl;
+package br.com.pcsist.domain.produto.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.example.domain.produto.Produto;
+import br.com.pcsist.domain.produto.Produto;
 
 final class ProdutoRowMapper implements RowMapper<Produto> {
 

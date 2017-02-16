@@ -1,4 +1,4 @@
-package com.example.domain.usuario;
+package br.com.pcsist.domain.usuario;
 
 public class Usuario {
 

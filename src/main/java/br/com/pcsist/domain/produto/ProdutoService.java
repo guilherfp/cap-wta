@@ -1,6 +1,6 @@
-package com.example.domain.produto;
+package br.com.pcsist.domain.produto;
 
-import com.example.domain.usuario.Usuario;
+import br.com.pcsist.domain.usuario.Usuario;
 
 public interface ProdutoService {
 

@@ -1,4 +1,4 @@
-package com.example.rest;
+package br.com.pcsist.rest;
 
 import java.util.List;
 import java.util.Map;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.domain.produto.Produto;
-import com.example.domain.produto.ProdutoRepository;
-import com.example.domain.produto.ProdutoService;
+import br.com.pcsist.domain.produto.Produto;
+import br.com.pcsist.domain.produto.ProdutoRepository;
+import br.com.pcsist.domain.produto.ProdutoService;
 
 @Controller
 @RequestMapping("/produtos")

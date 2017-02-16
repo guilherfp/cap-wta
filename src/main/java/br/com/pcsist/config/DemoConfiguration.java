@@ -1,4 +1,4 @@
-package com.example.config;
+package br.com.pcsist.config;
 
 import javax.sql.DataSource;
 
@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
-import com.example.domain.produto.ProdutoRepository;
-import com.example.domain.produto.impl.ProdutoRepositoryImpl;
+import br.com.pcsist.domain.produto.ProdutoRepository;
+import br.com.pcsist.domain.produto.impl.ProdutoRepositoryImpl;
 
 @Configuration
 public class DemoConfiguration {

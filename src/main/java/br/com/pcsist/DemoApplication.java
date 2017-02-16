@@ -1,11 +1,11 @@
-package com.example;
+package br.com.pcsist;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.domain.produto.ProdutoRepository;
+import br.com.pcsist.domain.produto.ProdutoRepository;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {

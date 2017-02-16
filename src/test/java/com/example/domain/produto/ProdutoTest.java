@@ -6,6 +6,8 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.com.pcsist.domain.produto.Produto;
+
 public class ProdutoTest {
 
   private Produto produto;

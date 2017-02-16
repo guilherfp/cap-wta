@@ -14,10 +14,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.example.domain.produto.Produto;
-import com.example.domain.produto.ProdutoRepository;
-import com.example.domain.usuario.Perfil;
-import com.example.domain.usuario.Usuario;
+import br.com.pcsist.domain.produto.Produto;
+import br.com.pcsist.domain.produto.ProdutoRepository;
+import br.com.pcsist.domain.produto.impl.ProdutoServiceImpl;
+import br.com.pcsist.domain.usuario.Perfil;
+import br.com.pcsist.domain.usuario.Usuario;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ProdutoServiceImplTest {

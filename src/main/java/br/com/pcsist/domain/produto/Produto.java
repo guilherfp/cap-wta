@@ -1,4 +1,4 @@
-package com.example.domain.produto;
+package br.com.pcsist.domain.produto;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,10 +6,11 @@ import java.util.Objects;
 
 import org.apache.commons.lang3.Validate;
 
-import com.example.domain.usuario.Perfil;
-import com.example.domain.usuario.Usuario;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
+
+import br.com.pcsist.domain.usuario.Perfil;
+import br.com.pcsist.domain.usuario.Usuario;
 
 public class Produto {
 

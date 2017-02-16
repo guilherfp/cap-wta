@@ -1,4 +1,4 @@
-package com.example.domain.produto;
+package br.com.pcsist.domain.produto;
 
 import java.util.List;
 import java.util.Map;
