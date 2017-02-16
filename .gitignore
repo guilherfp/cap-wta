@@ -12,3 +12,11 @@
 hs_err_pid*
 
 target/
+
+\.settings/
+
+\.springBeans
+
+\.classpath
+
+\.project
