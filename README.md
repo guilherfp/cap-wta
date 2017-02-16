@@ -1,2 +1,2 @@
-# cap-wta
+# Capacitação WTA
 Projeto demonstração capacitação WTA
