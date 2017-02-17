@@ -45,7 +45,7 @@ public class ProdutoServiceImplTest {
     produtoService.inativarProdutosCaros(usuario);
 
     assertThat(produto.isAtivo()).isFalse();
-    verify(produtoRepository, times(1)).salvar(any(Produto.class));
+    verify(produtoRepository, times(1)).alterar(any(Produto.class));
   }
 
   @Test
@@ -58,6 +58,8 @@ public class ProdutoServiceImplTest {
 
     assertThat(produto1.getValor()).isEqualTo(150);
     assertThat(produto2.getValor()).isEqualTo(250);
+
+    verify(produtoRepository, times(2)).alterar(any(Produto.class));
   }
 
 }

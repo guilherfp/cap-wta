@@ -1,4 +1,4 @@
-package br.com.pcsist.domain.produto.impl;
+package br.com.pcsist;
 
 import javax.sql.DataSource;
 

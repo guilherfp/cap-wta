@@ -72,4 +72,17 @@ public class ProdutoRepositoryImpl implements ProdutoRepository {
     return template.queryForList(sql);
   }
 
+  @Override
+  public long valorTotal() {
+    String sql = "select sum(valor) from produto";
+    Long value = template.queryForObject(sql, Long.class);
+    return value != null ? value : 0;
+  }
+
+  @Override
+  public void alterar(Produto produto) {
+    String sql = "update produto set valor=?, ativo=? where codigo = ?";
+    template.update(sql, produto.getValor(), produto.isAtivo(), produto.getCodigo());
+  }
+
 }

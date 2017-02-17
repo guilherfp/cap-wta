@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import br.com.pcsist.DataSourceTestConfig;
 import br.com.pcsist.domain.produto.Produto;
 import br.com.pcsist.domain.produto.ProdutoRepository;
 

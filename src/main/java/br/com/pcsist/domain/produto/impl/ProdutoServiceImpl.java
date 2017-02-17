@@ -29,7 +29,7 @@ public class ProdutoServiceImpl implements ProdutoService {
   private Consumer<? super Produto> inativarCaros(Usuario usuario) {
     return produto -> {
       if (produto.inativarCasoSejaCaro(usuario)) {
-        produtoRepository.salvar(produto);
+        produtoRepository.alterar(produto);
       }
     };
   }
@@ -40,15 +40,17 @@ public class ProdutoServiceImpl implements ProdutoService {
     if (produtoExistente != null) {
       produtoExistente.setValor(produto.getValor());
       produtoExistente.setAtivo(produto.isAtivo());
-      produtoRepository.salvar(produtoExistente);
+      produtoRepository.alterar(produtoExistente);
     }
   }
 
   @Override
   public void incrementarValor(int valor) {
     List<Produto> todos = produtoRepository.todos();
-    todos.forEach(p -> p.incrementar(valor));
-    produtoRepository.salvar(todos);
+    todos.forEach(p -> {
+      p.incrementar(valor);
+      produtoRepository.alterar(p);
+    });
   }
 
 }

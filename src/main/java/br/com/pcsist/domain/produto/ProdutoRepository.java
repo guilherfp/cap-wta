@@ -9,6 +9,8 @@ public interface ProdutoRepository {
 
   void salvar(Produto produto);
 
+  void alterar(Produto produto);
+
   Produto comCodigo(int codigo);
 
   long totalDeProdutos();
@@ -18,5 +20,7 @@ public interface ProdutoRepository {
   List<Map<String, Object>> codigosValores();
 
   void salvar(List<Produto> produtos);
+
+  long valorTotal();
 
 }

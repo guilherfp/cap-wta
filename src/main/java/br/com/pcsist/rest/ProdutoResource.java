@@ -40,13 +40,18 @@ public class ProdutoResource {
   }
 
   @RequestMapping(value = "/codigos", method = RequestMethod.GET)
-  public @ResponseBody List<Long> total() {
+  public @ResponseBody List<Long> codigos() {
     return produtoRepository.codigos();
   }
 
   @RequestMapping(value = "/total", method = RequestMethod.GET)
-  public @ResponseBody Long codigos() {
+  public @ResponseBody Long total() {
     return produtoRepository.totalDeProdutos();
+  }
+
+  @RequestMapping(value = "/valor-total", method = RequestMethod.GET)
+  public @ResponseBody Long valorTotal() {
+    return produtoRepository.valorTotal();
   }
 
   @RequestMapping(value = "/codigos-valores", method = RequestMethod.GET)
