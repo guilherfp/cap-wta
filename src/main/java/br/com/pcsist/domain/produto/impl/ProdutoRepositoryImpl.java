@@ -27,7 +27,7 @@ public class ProdutoRepositoryImpl implements ProdutoRepository {
 
   @Override
   public List<Produto> todos() {
-    String sql = "select * from produto";
+    String sql = "select * from produto order by codigo desc";
     return template.query(sql, mapper);
   }
 
