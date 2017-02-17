@@ -14,13 +14,11 @@ import br.com.pcsist.domain.produto.ProdutoRepository;
 
 public class ProdutoRepositoryImpl implements ProdutoRepository {
 
+  private static final String INSERT_PRODUTO = "insert into produto (codigo, valor, ativo) values (?, ?, ?)";
   private JdbcOperations template;
   private ProdutoRowMapper mapper;
-  // private SimpleJdbcInsert insert;
 
   public ProdutoRepositoryImpl(DataSource dataSource) {
-    // insert = new SimpleJdbcInsert(dataSource).withTableName("produto");
-    // insert.setColumnNames(Arrays.asList("codigo", "valor", "ativo"));
     template = new JdbcTemplate(dataSource);
     mapper = new ProdutoRowMapper();
   }
@@ -33,19 +31,12 @@ public class ProdutoRepositoryImpl implements ProdutoRepository {
 
   @Override
   public void salvar(Produto produto) {
-    // Map<String, Object> map = new HashMap<>();
-    // map.put("codigo", produto.getCodigo());
-    // map.put("valor", produto.getValor());
-    // map.put("ativo", produto.isAtivo());
-    // insert.execute(map);
-    String sql = "insert into produto (codigo, valor, ativo) values (?, ?, ?)";
-    template.update(sql, produto.getCodigo(), produto.getValor(), produto.isAtivo());
+    template.update(INSERT_PRODUTO, produto.getCodigo(), produto.getValor(), produto.isAtivo());
   }
 
   @Override
   public void salvar(List<Produto> produtos) {
-    String sql = "insert into produto (codigo, valor, ativo) values (?, ?, ?)";
-    template.batchUpdate(sql, produtos, 100, (ps, p) -> {
+    template.batchUpdate(INSERT_PRODUTO, produtos, 100, (ps, p) -> {
       ps.setInt(1, p.getCodigo());
       ps.setInt(2, p.getValor());
       ps.setBoolean(3, p.isAtivo());

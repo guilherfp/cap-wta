@@ -111,4 +111,8 @@ public class Produto {
     return false;
   }
 
+  public void incrementar(int valor) {
+    this.valor += valor;
+  }
+
 }

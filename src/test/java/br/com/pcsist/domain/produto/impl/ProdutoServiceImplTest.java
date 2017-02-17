@@ -1,4 +1,4 @@
-package com.example.domain.produto.impl;
+package br.com.pcsist.domain.produto.impl;
 
 import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -46,6 +46,18 @@ public class ProdutoServiceImplTest {
 
     assertThat(produto.isAtivo()).isFalse();
     verify(produtoRepository, times(1)).salvar(any(Produto.class));
+  }
+
+  @Test
+  public void testIncrementarValor() throws Exception {
+    Produto produto1 = new Produto(1, 100);
+    Produto produto2 = new Produto(1, 200);
+    when(produtoRepository.todos()).thenReturn(asList(produto1, produto2));
+
+    produtoService.incrementarValor(50);
+
+    assertThat(produto1.getValor()).isEqualTo(150);
+    assertThat(produto2.getValor()).isEqualTo(250);
   }
 
 }

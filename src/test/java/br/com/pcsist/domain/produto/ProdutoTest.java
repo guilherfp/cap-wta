@@ -1,4 +1,4 @@
-package com.example.domain.produto;
+package br.com.pcsist.domain.produto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

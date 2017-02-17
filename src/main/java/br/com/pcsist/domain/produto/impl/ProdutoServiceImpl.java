@@ -1,5 +1,6 @@
 package br.com.pcsist.domain.produto.impl;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,13 @@ public class ProdutoServiceImpl implements ProdutoService {
       produtoExistente.setAtivo(produto.isAtivo());
       produtoRepository.salvar(produtoExistente);
     }
+  }
+
+  @Override
+  public void incrementarValor(int valor) {
+    List<Produto> todos = produtoRepository.todos();
+    todos.forEach(p -> p.incrementar(valor));
+    produtoRepository.salvar(todos);
   }
 
 }
